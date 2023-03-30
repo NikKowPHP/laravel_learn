@@ -22,7 +22,7 @@ Route::get('/', function () {
 // });
 Route::controller(DemoController::class)->group(function()
 {
-Route::get('/about',  'Index')->name('about.page');
+Route::get('/about',  'Index')->name('about.page')->middleware('check');
 Route::get('/contact', 'ContactMethod')->name('contact.page');
 
 });
